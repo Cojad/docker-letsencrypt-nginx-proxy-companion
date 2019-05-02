@@ -229,7 +229,7 @@ function update_certs {
                 fi
             fi
         fi
-
+        reload_nginx
         echo "Creating/renewal $base_domain certificates... (${hosts_array_expanded[*]})"
         /usr/bin/simp_le \
             -f account_key.json -f key.pem -f chain.pem -f fullchain.pem -f cert.pem \
